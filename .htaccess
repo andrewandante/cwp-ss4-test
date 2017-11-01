@@ -48,12 +48,7 @@ ErrorDocument 500 /assets/error-500.html
 	# Pass through the original path as a query parameter, and retain the existing parameters.
 	RewriteCond %{REQUEST_URI} ^(.*)$
 	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteRule .* framework/main.php?url=%1 [QSA]
-
-	# If framework isn't in a subdirectory, rewrite to installer
-	RewriteCond %{REQUEST_URI} ^(.*)/framework/main.php$
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteRule . %1/install.php? [R,L]
+	RewriteRule .* index.php?url=%1 [QSA]
 
 </IfModule>
 ### SILVERSTRIPE END ###
