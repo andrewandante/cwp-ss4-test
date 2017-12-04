@@ -27,6 +27,7 @@
 
 # ignore assets
 /assets/
+/resources/
 
 # ignore phpstorm stuff
 /.idea/
